@@ -1,0 +1,44 @@
+## 动画
+路径 /M80_base/frameworks/base/core/res/res/values/attrs.xml
+<!-- The animation used when a window is being added. -->
+<attr name="windowEnterAnimation" format="reference" />
+<!-- The animation used when a window is being removed. -->
+
+<attr name="windowExitAnimation" format="reference" />
+<!-- The animation used when a window is going from INVISIBLE to VISIBLE. -->
+<attr name="windowShowAnimation" format="reference" />
+<!-- The animation used when a window is going from VISIBLE to INVISIBLE. -->
+<attr name="windowHideAnimation" format="reference" />
+
+
+路径   /M80_base/flyme/frameworks/flyme-res/res/values/mz_styles.xml
+<style name="Animation.RecentApplications" parent="android:style/Animation">
+    <item name="android:windowEnterAnimation">@flyme:anim/mz_push_up_in_recent</item>
+    <item name="android:windowShowAnimation">@flyme:anim/mz_push_up_in_recent</item>
+    <item name="android:windowExitAnimation">@flyme:anim/mz_push_down_out_recent</item>
+    <item name="android:windowHideAnimation">@flyme:anim/mz_push_down_out_recent</item>
+</style>
+
+路径  /M80_base/flyme/frameworks/flyme-res/res-sdk/anim/
+这个路径下面是所有的动画的定义的地方
+
+## 总结
+
+系统动画定义是在 frameworks/base/core/res/res/values/attrs.xml 文件中,该文件指定相关的
+系统动画, format=reference表示参考某一资源ID,
+这个ID是在 flyme/frameworks/flyme-res/res/values/mz_styles.xml中对应起来的,
+<item name="android:windowEnterAnimation">@flyme:anim/mz_push_up_in_recent</item>
+即 windowEnterAnimation动画是在@flyme:anim/mz_push_up_in_recent实现的,
+这个文件在 /M80_base/flyme/frameworks/flyme-res/res-sdk/anim/   下面
+
+## framework
+参考文档 http://blog.csdn.net/yuanzeyao/article/details/42386549
+framework/base/core/res  下面存储的是framework的资源文件
+frameworks/base/core/res/res/values/attrs.xml  中定义的是一些android中常用的属性,只是定义而非声明
+                                               format,有注释:
+                                               <!-- These are the standard attributes that make up a complete theme. -->
+flyme/frameworks/flyme-res/res/values/mz_styles.xml  中是flyme对系统theme的标准属性进行定义,关联资源文件
+
+我们再来整合这三个文件的内容吧，首先在attrs.xml文件中，定义了Android中大部分的属性，
+也就是说以后所有View/Activity中大部分的属性就是在这里定义的，然后在attrs_manifest.xml中定义了一个叫做theme的属性，
+它的值就是再themes 文件中定义的Theme或者继承自“Theme”的style。

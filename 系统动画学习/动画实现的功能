@@ -1,0 +1,52 @@
+## 动画实现的功能
+activity动画
+mz_activity_to_next_close_enter.xml   返回上级时新出来的Activity的进入动画
+mz_activity_to_next_close_exit.xml    返回上一级时当前Activity的退出动画
+mz_activity_to_next_open_enter.xml    跳转到下一个activity时,新activity的进入动画
+mz_activity_to_next_open_exit.xml     跳转到下一个activity时,当前activity的退出动画
+
+
+<item name="android:activityOpenEnterAnimation">@flyme:anim/mz_activity_to_next_open_enter</item>
+<item name="android:activityOpenExitAnimation">@flyme:anim/mz_activity_to_next_open_exit</item>
+<item name="android:activityCloseEnterAnimation">@flyme:anim/mz_activity_to_next_close_enter</item>
+<item name="android:activityCloseExitAnimation">@flyme:anim/mz_activity_to_next_close_exit</item>
+
+app切换动画
+mz_app_to_next_close_enter.xml
+mz_app_to_next_close_exit.xml
+mz_app_to_next_open_enter.xml
+mz_app_to_next_open_exit.xml
+
+
+
+
+计算器动画
+mz_calculator_big_to_middle.xml
+mz_calculator_big_to_small.xml
+mz_calculator_enter.xml
+mz_calculator_exit.xml
+
+桌面进入应用时的动画
+mz_new_app_to_next_close_enter.xml
+
+mz_new_app_to_next_close_exit.xml
+mz_new_app_to_next_open_enter.xml
+mz_new_app_to_next_open_exit.xml
+
+
+<item name="android:taskOpenEnterAnimation">@flyme:anim/mz_new_app_to_next_open_enter</item>
+<item name="android:taskOpenExitAnimation">@flyme:anim/mz_new_app_to_next_open_exit</item>
+<item name="android:taskCloseEnterAnimation">@flyme:anim/mz_new_app_to_next_close_enter</item>
+<item name="android:taskCloseExitAnimation">@flyme:anim/mz_new_app_to_next_close_exit</item>
+<item name="android:taskToFrontEnterAnimation">@flyme:anim/mz_new_app_to_next_open_enter</item>
+<item name="android:taskToFrontExitAnimation">@flyme:anim/mz_new_app_to_next_open_exit</item>
+<item name="android:taskToBackEnterAnimation">@flyme:anim/mz_new_app_to_next_close_enter</item>
+<item name="android:taskToBackExitAnimation">@flyme:anim/mz_new_app_to_next_close_exit</item>
+
+
+?
+mz_push_down_out_recent.xml
+
+
+壁纸
+mz_app_to_next_wallpaper_open_exit.xml

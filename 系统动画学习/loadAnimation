@@ -1,0 +1,207 @@
+## AppTransition中loadAnimation函数中if判断条件的含义
+Animation loadAnimation(WindowManager.LayoutParams lp, int transit, boolean enter,
+977            int appWidth, int appHeight, int orientation, Rect containingFrame, Rect contentInsets,
+978            Rect appFrame, boolean isVoiceInteraction) {
+979        Animation a;
+980        if (isVoiceInteraction && (transit == TRANSIT_ACTIVITY_OPEN
+981                || transit == TRANSIT_TASK_OPEN
+982                || transit == TRANSIT_TASK_TO_FRONT)) {
+983            a = loadAnimationRes(lp, enter
+984                    ? com.android.internal.R.anim.voice_activity_open_enter
+985                    : com.android.internal.R.anim.voice_activity_open_exit);
+986            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) Slog.v(TAG,
+987                    "applyAnimation voice:"
+988                    + " anim=" + a + " transit=" + appTransitionToString(transit)
+989                    + " isEntrance=" + enter + " Callers=" + Debug.getCallers(3));
+990        } else if (isVoiceInteraction && (transit == TRANSIT_ACTIVITY_CLOSE
+991                || transit == TRANSIT_TASK_CLOSE
+992                || transit == TRANSIT_TASK_TO_BACK)) {
+993            a = loadAnimationRes(lp, enter
+994                    ? com.android.internal.R.anim.voice_activity_close_enter
+995                    : com.android.internal.R.anim.voice_activity_close_exit);
+996            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) Slog.v(TAG,
+997                    "applyAnimation voice:"
+998                    + " anim=" + a + " transit=" + appTransitionToString(transit)
+999                    + " isEntrance=" + enter + " Callers=" + Debug.getCallers(3));
+1000        } else if (mNextAppTransitionType == NEXT_TRANSIT_TYPE_CUSTOM) {
+1001            a = loadAnimationRes(mNextAppTransitionPackage, enter ?
+1002                    mNextAppTransitionEnter : mNextAppTransitionExit);
+1003            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) Slog.v(TAG,
+1004                    "applyAnimation:"
+1005                    + " anim=" + a + " nextAppTransition=ANIM_CUSTOM"
+1006                    + " transit=" + appTransitionToString(transit) + " isEntrance=" + enter
+1007                    + " Callers=" + Debug.getCallers(3));
+1008        } else if (mNextAppTransitionType == NEXT_TRANSIT_TYPE_CUSTOM_IN_PLACE) {
+1009            a = loadAnimationRes(mNextAppTransitionPackage, mNextAppTransitionInPlace);
+1010            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) Slog.v(TAG,
+1011                    "applyAnimation:"
+1012                    + " anim=" + a + " nextAppTransition=ANIM_CUSTOM_IN_PLACE"
+1013                    + " transit=" + appTransitionToString(transit)
+1014                    + " Callers=" + Debug.getCallers(3));
+1015        } else if (mNextAppTransitionType == NEXT_TRANSIT_TYPE_CLIP_REVEAL) {
+1016            a = createClipRevealAnimationLocked(transit, enter, appFrame);
+1017            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) Slog.v(TAG,
+1018                    "applyAnimation:"
+1019                            + " anim=" + a + " nextAppTransition=ANIM_CLIP_REVEAL"
+1020                            + " Callers=" + Debug.getCallers(3));
+1021        } else if (mNextAppTransitionType == NEXT_TRANSIT_TYPE_SCALE_UP) {
+1022            a = createScaleUpAnimationLocked(transit, enter, appWidth, appHeight);
+1023            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) Slog.v(TAG,
+1024                    "applyAnimation:"
+1025                    + " anim=" + a + " nextAppTransition=ANIM_SCALE_UP"
+1026                    + " transit=" + appTransitionToString(transit) + " isEntrance=" + enter
+1027                    + " Callers=" + Debug.getCallers(3));
+1028        } else if (mNextAppTransitionType == NEXT_TRANSIT_TYPE_THUMBNAIL_SCALE_UP ||
+1029                mNextAppTransitionType == NEXT_TRANSIT_TYPE_THUMBNAIL_SCALE_DOWN) {
+1030            mNextAppTransitionScaleUp =
+1031                    (mNextAppTransitionType == NEXT_TRANSIT_TYPE_THUMBNAIL_SCALE_UP);
+1032            a = createThumbnailEnterExitAnimationLocked(getThumbnailTransitionState(enter),
+1033                    appWidth, appHeight, transit);
+1034            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) {
+1035                String animName = mNextAppTransitionScaleUp ?
+1036                        "ANIM_THUMBNAIL_SCALE_UP" : "ANIM_THUMBNAIL_SCALE_DOWN";
+1037                Slog.v(TAG, "applyAnimation:"
+1038                        + " anim=" + a + " nextAppTransition=" + animName
+1039                        + " transit=" + appTransitionToString(transit) + " isEntrance=" + enter
+1040                        + " Callers=" + Debug.getCallers(3));
+1041            }
+1042        } else if (mNextAppTransitionType == NEXT_TRANSIT_TYPE_THUMBNAIL_ASPECT_SCALE_UP ||
+1043                mNextAppTransitionType == NEXT_TRANSIT_TYPE_THUMBNAIL_ASPECT_SCALE_DOWN) {
+1044            mNextAppTransitionScaleUp =
+1045                    (mNextAppTransitionType == NEXT_TRANSIT_TYPE_THUMBNAIL_ASPECT_SCALE_UP);
+1046            a = createAspectScaledThumbnailEnterExitAnimationLocked(
+1047                    getThumbnailTransitionState(enter), appWidth, appHeight, orientation,
+1048                    transit, containingFrame, contentInsets);
+1049            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) {
+1050                String animName = mNextAppTransitionScaleUp ?
+1051                        "ANIM_THUMBNAIL_ASPECT_SCALE_UP" : "ANIM_THUMBNAIL_ASPECT_SCALE_DOWN";
+1052                Slog.v(TAG, "applyAnimation:"
+1053                        + " anim=" + a + " nextAppTransition=" + animName
+1054                        + " transit=" + appTransitionToString(transit) + " isEntrance=" + enter
+1055                        + " Callers=" + Debug.getCallers(3));
+1056            }
+1057        } else {
+1058            int animAttr = 0;
+1059            switch (transit) {
+1060                case TRANSIT_ACTIVITY_OPEN:
+1061                    animAttr = enter
+1062                            ? WindowAnimation_activityOpenEnterAnimation
+1063                            : WindowAnimation_activityOpenExitAnimation;
+1064                    break;
+1065                case TRANSIT_ACTIVITY_CLOSE:
+1066                    animAttr = enter
+1067                            ? WindowAnimation_activityCloseEnterAnimation
+1068                            : WindowAnimation_activityCloseExitAnimation;
+1069                    break;
+1070                case TRANSIT_TASK_OPEN:
+1071                    animAttr = enter
+1072                            ? WindowAnimation_taskOpenEnterAnimation
+1073                            : WindowAnimation_taskOpenExitAnimation;
+1074                    break;
+1075                case TRANSIT_TASK_CLOSE:
+1076                    animAttr = enter
+1077                            ? WindowAnimation_taskCloseEnterAnimation
+1078                            : WindowAnimation_taskCloseExitAnimation;
+1079                    break;
+1080                case TRANSIT_TASK_TO_FRONT:
+1081                    animAttr = enter
+1082                            ? WindowAnimation_taskToFrontEnterAnimation
+1083                            : WindowAnimation_taskToFrontExitAnimation;
+1084                    break;
+1085                case TRANSIT_TASK_TO_BACK:
+1086                    animAttr = enter
+1087                            ? WindowAnimation_taskToBackEnterAnimation
+1088                            : WindowAnimation_taskToBackExitAnimation;
+1089                    break;
+1090                case TRANSIT_WALLPAPER_OPEN:
+1091                    animAttr = enter
+1092                            ? WindowAnimation_wallpaperOpenEnterAnimation
+1093                            : WindowAnimation_wallpaperOpenExitAnimation;
+1094                    break;
+1095                case TRANSIT_WALLPAPER_CLOSE:
+1096                    animAttr = enter
+1097                            ? WindowAnimation_wallpaperCloseEnterAnimation
+1098                            : WindowAnimation_wallpaperCloseExitAnimation;
+1099                    break;
+1100                case TRANSIT_WALLPAPER_INTRA_OPEN:
+1101                    animAttr = enter
+1102                            ? WindowAnimation_wallpaperIntraOpenEnterAnimation
+1103                            : WindowAnimation_wallpaperIntraOpenExitAnimation;
+1104                    break;
+1105                case TRANSIT_WALLPAPER_INTRA_CLOSE:
+1106                    animAttr = enter
+1107                            ? WindowAnimation_wallpaperIntraCloseEnterAnimation
+1108                            : WindowAnimation_wallpaperIntraCloseExitAnimation;
+1109                    break;
+1110                case TRANSIT_TASK_OPEN_BEHIND:
+1111                    animAttr = enter
+1112                            ? WindowAnimation_launchTaskBehindSourceAnimation
+1113                            : WindowAnimation_launchTaskBehindTargetAnimation;
+1114            }
+1115            a = animAttr != 0 ? loadAnimationAttr(lp, animAttr) : null;
+1116            if (DEBUG_APP_TRANSITIONS || DEBUG_ANIM) Slog.v(TAG,
+1117                    "applyAnimation:"
+1118                    + " anim=" + a
+1119                    + " animAttr=0x" + Integer.toHexString(animAttr)
+1120                    + " transit=" + appTransitionToString(transit) + " isEntrance=" + enter
+1121                    + " Callers=" + Debug.getCallers(3));
+1122        }
+1123        return a;
+1124    }
+1125
+
+参考资料 https://yq.aliyun.com/articles/3016
+
+TRANSIT_UNSET：初始值，尚未设定
+TRANSIT_NONE：没有动画
+TRANSIT_ACTIVITY_OPEN：在同一task中在最顶端打开一个窗口
+TRANSIT_ACTIVITY_CLOSE：关闭当前活动窗口，恢复同一个task中的上一个窗口
+TRANSIT_TASK_OPEN：新建任务并创建窗口
+TRANSIT_TASK_CLOSE：关闭当前活动窗口，回到上一个任务
+TRANSIT_TASK_TO_FRONT：将任务移至最顶
+TRANSIT_TASK_TO_BACK：将当前任务移至最末
+TRANSIT_WALLPAPER_CLOSE：关闭到无墙纸的应用
+TRANSIT_WALLPAPER_OPEN：起动墙纸应用
+TRANSIT_WALLPAPER_INTRA_OPEN：都有墙纸打开
+TRANSIT_WALLPAPER_INTRA_CLOSE：有墙纸关闭
+TRANSIT_TASK_OPEN_BEHIND：在新任务启动但是在后台，一闪而过
+TRANSIT_TASK_IN_PLACE：就在现场画动画
+
+
+/** Not set up for a transition. */
+public static final int TRANSIT_UNSET = -1;
+/** No animation for transition. */
+public static final int TRANSIT_NONE = 0;
+/** A window in a new activity is being opened on top of an existing one in the same task. */
+public static final int TRANSIT_ACTIVITY_OPEN = 6;
+/** The window in the top-most activity is being closed to reveal the
+ * previous activity in the same task. */
+public static final int TRANSIT_ACTIVITY_CLOSE = 7;
+/** A window in a new task is being opened on top of an existing one
+ * in another activity's task. */
+public static final int TRANSIT_TASK_OPEN = 8;
+/** A window in the top-most activity is being closed to reveal the
+ * previous activity in a different task. */
+public static final int TRANSIT_TASK_CLOSE = 9;
+/** A window in an existing task is being displayed on top of an existing one
+ * in another activity's task. */
+public static final int TRANSIT_TASK_TO_FRONT = 10;
+/** A window in an existing task is being put below all other tasks. */
+public static final int TRANSIT_TASK_TO_BACK = 11;
+/** A window in a new activity that doesn't have a wallpaper is being opened on top of one that
+ * does, effectively closing the wallpaper. */
+public static final int TRANSIT_WALLPAPER_CLOSE = 12;
+/** A window in a new activity that does have a wallpaper is being opened on one that didn't,
+ * effectively opening the wallpaper. */
+public static final int TRANSIT_WALLPAPER_OPEN = 13;
+/** A window in a new activity is being opened on top of an existing one, and both are on top
+ * of the wallpaper. */
+public static final int TRANSIT_WALLPAPER_INTRA_OPEN = 14;
+/** The window in the top-most activity is being closed to reveal the previous activity, and
+ * both are on top of the wallpaper. */
+public static final int TRANSIT_WALLPAPER_INTRA_CLOSE = 15;
+/** A window in a new task is being opened behind an existing one in another activity's task.
+ * The new window will show briefly and then be gone. */
+public static final int TRANSIT_TASK_OPEN_BEHIND = 16;
+/** A window in a task is being animated in-place. */
+public static final int TRANSIT_TASK_IN_PLACE = 17;

@@ -1,0 +1,39 @@
+# 源码编译
+## 编译过程
+下载源码
+repo init -u ssh://wangjiangchuan@review.rnd.meizu.com:29999/platform/manifest -b xxx机型型号
+
+比如: repo init -u ssh://XXX@review.rnd.meizu.com:29999/platform/manifest -b M80_base
+
+接着 repo sync 自动同步代码到本地
+
+过程会比较慢,需要等待一段时间
+
+## 编码
+source ./build/envsetup.sh
+
+lanuch
+
+make update-api
+
+make
+
+## 刷机
+### 相关镜像介绍
+system.img镜像文件描述的是设备上的system分区，即/system目录，它是在build/core/Makefile文件中生成的
+
+boot.img镜像 build/core/main.mk文件定义了boot.img镜像文件的依赖规则，我们可以通过执行make bootimage命令来执行
+
+ramdisk.img镜像 build/core/main.mk文件定义了ramdisk.img镜像文件的依赖规则，我们可以通过执行make ramdisk命令来执行
+
+ userdata.img镜像描述的是Android系统的data分区，即/data目录，里面包含了用户安装的APP以及数据等等。
+
+ recovery.img是设备进入recovery模式时所加载的镜像。recovery模式就是用来更新系统的，我们可以认为我们的设备具有两个系统。
+ 一个是正常的系统，它由boot.img、system.img、ramdisk.img和userdata.img等组成，
+ 另外一个就是recovery系统，由recovery.img组成。
+
+ ### 刷机代码
+参考 http://blog.csdn.net/luoshengyang/article/details/29688041
+参考 http://blog.csdn.net/leiming32/article/details/49658657
+
+内部参考文件 http://redmine.meizu.com/documents/457

@@ -1,0 +1,47 @@
+## ActivityOptions
+ActivityOptions用来做Activity的切换动画,并且提供低版本的兼容类ActivityOptionCompat
+ActivityOptions有一下几个函数
+
+
+
+1. makeCustomAnimation(Context context, int enterResId, int exitResId)
+ Activity切换动画,指定从一个Activity切换到另外一个Activity的退出和进入动画,
+ 这个和overridePendingTransition非常类似,在实现效果上和overridePendingTransition也是相同的。
+
+2. makeScaleUpAnimation(View source, int startX, int startY, int width, int height)
+Activity从一个较小的view逐渐放到到Activity的原始大小
+第1个参数是scale哪个view的大小，第2和3个参数是以view为基点，
+从哪开始动画，这里是该view的中心，4和5参数是新的activity从多大开始放大，这里是从无到有的过程。
+
+3. makeThumbnailScaleUpAnimation
+该方法和上面的makeScaleUpAnimation非常相似，只不过，这里是通过放大一个缩略图，
+最后过度到一个新的activity，第2个参数是指那个图片要放大，3和4参数表示从哪开始动画.
+
+4. makeSceneTransitionAnimation
+用于Activity之间的共享元素的动画
+
+5. makeClipRevealAnimation(View source, int startX, int startY, int width, int height)
+Activity的揭示动画,
+
+## detachWallpaper 和zAdjustment
+android:detachWallpaper 设置是否在壁纸上运行，只对设置了壁纸背景的窗口动画(window animation)有效。
+设为true，则动画只在窗口运行，壁纸背景保持不变
+
+android:zAdjustment 表示被animated的内容在运行时在z轴上的位置，默认为normal。
+normal保持内容当前的z轴顺序
+top运行时在最顶层显示
+bottom运行时在最底层显示
+
+点击编辑框弹出输入法的时候,输入法窗口就是在当前的窗口的最顶端,覆盖掉了部分下面的窗口,
+Z轴概念如下图:
+![1]
+
+## windowAnimationStyle
+在 M91-l1_base/frameworks/base/core/res/res/values/attrs.xml文件中定义了theme的所有基本属性
+<declare-styleable name="WindowAnimation"> 处定义了window动画的所有属性
+但是这里仅仅只对属性进行了申明,并未对属性进行定义,如果是自己写的theme,则可以对这些属性进行定义,
+关联相应的资源文件.
+
+
+http://blog.csdn.net/luoshengyang/article/details/8570428
+[1]: /root/AtomFolder/系统动画学习/文档所需图片/Z轴的概念.jpg

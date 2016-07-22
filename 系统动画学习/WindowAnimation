@@ -1,0 +1,120 @@
+# WindowAnimation学习
+## 任务目标
+熟悉系统动画的设置和解析,知道系统的动画在哪里修改,属性如何关联.
+
+## 相关的资料
+陈明海的task
+http://redmine.meizu.com/issues/253677
+参考文档
+http://redmine.meizu.com/documents/1093
+
+## 内容
+路径:
+/M80_base/frameworks/base/core/res/res/values/attrs.xml
+<declare-styleable name="WindowAnimation">
+<!-- Window animation class attributes. -->
+2042    <declare-styleable name="WindowAnimation">
+2043        <!-- The animation used when a window is being added. -->
+2044        <attr name="windowEnterAnimation" format="reference" />
+2045        <!-- The animation used when a window is being removed. -->
+2046        <attr name="windowExitAnimation" format="reference" />
+2047        <!-- The animation used when a window is going from INVISIBLE to VISIBLE. -->
+2048        <attr name="windowShowAnimation" format="reference" />
+2049        <!-- The animation used when a window is going from VISIBLE to INVISIBLE. -->
+2050        <attr name="windowHideAnimation" format="reference" />
+2051
+2052        <!--  When opening a new activity, this is the animation that is
+2053              run on the next activity (which is entering the screen). -->
+2054        <attr name="activityOpenEnterAnimation" format="reference" />
+2055        <!--  When opening a new activity, this is the animation that is
+2056              run on the previous activity (which is exiting the screen). -->
+2057        <attr name="activityOpenExitAnimation" format="reference" />
+2058        <!--  When closing the current activity, this is the animation that is
+2059              run on the next activity (which is entering the screen). -->
+2060        <attr name="activityCloseEnterAnimation" format="reference" />
+2061        <!--  When closing the current activity, this is the animation that is
+2062              run on the current activity (which is exiting the screen). -->
+2063        <attr name="activityCloseExitAnimation" format="reference" />
+2064        <!--  When opening an activity in a new task, this is the animation that is
+2065              run on the activity of the new task (which is entering the screen). -->
+2066        <attr name="taskOpenEnterAnimation" format="reference" />
+2067        <!--  When opening an activity in a new task, this is the animation that is
+2068              run on the activity of the old task (which is exiting the screen). -->
+2069        <attr name="taskOpenExitAnimation" format="reference" />
+2070        <!--  When opening an activity in a new task using Intent/FLAG_ACTIVITY_LAUNCH_BEHIND,
+2071              this is the animation that is run on the activity of the new task (which is
+2072              entering the screen and then leaving). -->
+2073        <attr name="launchTaskBehindTargetAnimation" format="reference" />
+2074        <!--  When opening an activity in a new task using Intent.FLAG_ACTIVITY_LAUNCH_BEHIND,
+2075              this is the animation that is run on the activity of the old task (which is
+2076              already on the screen and then stays on). -->
+2077        <attr name="launchTaskBehindSourceAnimation" format="reference" />
+2078        <!--  When closing the last activity of a task, this is the animation that is
+2079              run on the activity of the next task (which is entering the screen). -->
+2080        <attr name="taskCloseEnterAnimation" format="reference" />
+2081        <!--  When opening an activity in a new task, this is the animation that is
+2082              run on the activity of the old task (which is exiting the screen). -->
+2083        <attr name="taskCloseExitAnimation" format="reference" />
+2084        <!--  When bringing an existing task to the foreground, this is the
+2085              animation that is run on the top activity of the task being brought
+2086              to the foreground (which is entering the screen). -->
+2087        <attr name="taskToFrontEnterAnimation" format="reference" />
+2088        <!--  When bringing an existing task to the foreground, this is the
+2089              animation that is run on the current foreground activity
+2090              (which is exiting the screen). -->
+2091        <attr name="taskToFrontExitAnimation" format="reference" />
+2092        <!--  When sending the current task to the background, this is the
+2093              animation that is run on the top activity of the task behind
+2094              it (which is entering the screen). -->
+2095        <attr name="taskToBackEnterAnimation" format="reference" />
+2096        <!--  When sending the current task to the background, this is the
+2097              animation that is run on the top activity of the current task
+2098              (which is exiting the screen). -->
+2099        <attr name="taskToBackExitAnimation" format="reference" />
+2100
+2101        <!--  When opening a new activity that shows the wallpaper, while
+2102              currently not showing the wallpaper, this is the animation that
+2103              is run on the new wallpaper activity (which is entering the screen). -->
+2104        <attr name="wallpaperOpenEnterAnimation" format="reference" />
+2105        <!--  When opening a new activity that shows the wallpaper, while
+2106              currently not showing the wallpaper, this is the animation that
+2107              is run on the current activity (which is exiting the screen). -->
+2108        <attr name="wallpaperOpenExitAnimation" format="reference" />
+2109        <!--  When opening a new activity that hides the wallpaper, while
+2110              currently showing the wallpaper, this is the animation that
+2111              is run on the new activity (which is entering the screen). -->
+2112        <attr name="wallpaperCloseEnterAnimation" format="reference" />
+2113        <!--  When opening a new activity that hides the wallpaper, while
+2114              currently showing the wallpaper, this is the animation that
+2115              is run on the old wallpaper activity (which is exiting the screen). -->
+2116        <attr name="wallpaperCloseExitAnimation" format="reference" />
+2117
+2118        <!--  When opening a new activity that is on top of the wallpaper
+2119              when the current activity is also on top of the wallpaper,
+2120              this is the animation that is run on the new activity
+2121              (which is entering the screen).  The wallpaper remains
+2122              static behind the animation. -->
+2123        <attr name="wallpaperIntraOpenEnterAnimation" format="reference" />
+2124        <!--  When opening a new activity that is on top of the wallpaper
+2125              when the current activity is also on top of the wallpaper,
+2126              this is the animation that is run on the current activity
+2127              (which is exiting the screen).  The wallpaper remains
+2128              static behind the animation. -->
+2129        <attr name="wallpaperIntraOpenExitAnimation" format="reference" />
+2130        <!--  When closing a foreround activity that is on top of the wallpaper
+2131              when the previous activity is also on top of the wallpaper,
+2132              this is the animation that is run on the previous activity
+2133              (which is entering the screen).  The wallpaper remains
+2134              static behind the animation. -->
+2135        <attr name="wallpaperIntraCloseEnterAnimation" format="reference" />
+2136        <!--  When closing a foreround activity that is on top of the wallpaper
+2137              when the previous activity is also on top of the wallpaper,
+2138              this is the animation that is run on the current activity
+2139              (which is exiting the screen).  The wallpaper remains
+2140              static behind the animation. -->
+2141        <attr name="wallpaperIntraCloseExitAnimation" format="reference" />
+2142    </declare-styleable>
+
+
+
+## 动画作用介绍
