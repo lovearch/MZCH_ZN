@@ -37,3 +37,11 @@ ramdisk.img镜像 build/core/main.mk文件定义了ramdisk.img镜像文件的依
 参考 http://blog.csdn.net/leiming32/article/details/49658657
 
 内部参考文件 http://redmine.meizu.com/documents/457
+
+## 修改系统动画
+1. 写一个简单的Activity跳转的动画
+2. 修改系统的动画代码
+动画路径在: base/flyme/frameworks/flyme-res/res-sdk/anim/
+
+tips: 使用m、mm、mmm命令之前要在android源码目录下执行命令    . build/envsetup.sh
+使用m、mm、mmm命令之前要在android源码目录下执行命令

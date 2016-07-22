@@ -3,7 +3,6 @@ ActivityOptions用来做Activity的切换动画,并且提供低版本的兼容�
 ActivityOptions有一下几个函数
 
 
-
 1. makeCustomAnimation(Context context, int enterResId, int exitResId)
  Activity切换动画,指定从一个Activity切换到另外一个Activity的退出和进入动画,
  这个和overridePendingTransition非常类似,在实现效果上和overridePendingTransition也是相同的。
