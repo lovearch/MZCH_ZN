@@ -35,12 +35,14 @@ http://redmine.meizu.com/documents/1093
 2061        <!--  When closing the current activity, this is the animation that is
 2062              run on the current activity (which is exiting the screen). -->
 2063        <attr name="activityCloseExitAnimation" format="reference" />
+
 2064        <!--  When opening an activity in a new task, this is the animation that is
 2065              run on the activity of the new task (which is entering the screen). -->
 2066        <attr name="taskOpenEnterAnimation" format="reference" />
 2067        <!--  When opening an activity in a new task, this is the animation that is
 2068              run on the activity of the old task (which is exiting the screen). -->
 2069        <attr name="taskOpenExitAnimation" format="reference" />
+
 2070        <!--  When opening an activity in a new task using Intent/FLAG_ACTIVITY_LAUNCH_BEHIND,
 2071              this is the animation that is run on the activity of the new task (which is
 2072              entering the screen and then leaving). -->
@@ -49,6 +51,7 @@ http://redmine.meizu.com/documents/1093
 2075              this is the animation that is run on the activity of the old task (which is
 2076              already on the screen and then stays on). -->
 2077        <attr name="launchTaskBehindSourceAnimation" format="reference" />
+
 2078        <!--  When closing the last activity of a task, this is the animation that is
 2079              run on the activity of the next task (which is entering the screen). -->
 2080        <attr name="taskCloseEnterAnimation" format="reference" />
@@ -58,11 +61,13 @@ http://redmine.meizu.com/documents/1093
 2084        <!--  When bringing an existing task to the foreground, this is the
 2085              animation that is run on the top activity of the task being brought
 2086              to the foreground (which is entering the screen). -->
+
 2087        <attr name="taskToFrontEnterAnimation" format="reference" />
 2088        <!--  When bringing an existing task to the foreground, this is the
 2089              animation that is run on the current foreground activity
 2090              (which is exiting the screen). -->
 2091        <attr name="taskToFrontExitAnimation" format="reference" />
+
 2092        <!--  When sending the current task to the background, this is the
 2093              animation that is run on the top activity of the task behind
 2094              it (which is entering the screen). -->
