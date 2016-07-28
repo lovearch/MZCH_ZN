@@ -38,6 +38,10 @@ http://redmine.meizu.com/documents/1093
 2064        <!--  When opening an activity in a new task, this is the animation that is
 2065              run on the activity of the new task (which is entering the screen). -->
 2066        <attr name="taskOpenEnterAnimation" format="reference" />
+
+
+
+
 2067        <!--  When opening an activity in a new task, this is the animation that is
 2068              run on the activity of the old task (which is exiting the screen). -->
 2069        <attr name="taskOpenExitAnimation" format="reference" />
@@ -68,7 +72,7 @@ http://redmine.meizu.com/documents/1093
 2094              it (which is entering the screen). -->
 2095        <attr name="taskToBackEnterAnimation" format="reference" />
 2096        <!--  When sending the current task to the background, this is the
-2097              animation that is run on the top activity of the current task
+2097              animation that is run on the top activity of the current taskW
 2098              (which is exiting the screen). -->
 2099        <attr name="taskToBackExitAnimation" format="reference" />
 2100
