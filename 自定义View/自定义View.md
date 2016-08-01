@@ -99,6 +99,7 @@ onDraw()函数
 ## VIew的交互性
 
 ## 忠告
+自定义View的谷歌官方文档：https://developer.android.com/training/custom-views/index.html
 
 
 
