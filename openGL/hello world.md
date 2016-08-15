@@ -96,4 +96,13 @@ onDrawFrame 则在绘制每一帧的时候回调。
 ### fragmentShader 脚本
 
 
+### Opengl中矩阵的详细介绍
+[OpenGL矩阵变换](http://www.songho.ca/opengl/gl_transform.html)
+
+由于该文档是英文文档，此处提供中文解释：
+
+[多图解矩阵变化](http://www.flakor.cn/2014-05-15-384.html)
+
+
+
 
