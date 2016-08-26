@@ -1,0 +1,53 @@
+# FastScrollLetter使用简介
+这篇文章的内容是针对前面的FastScrollLetter使用做出的补充，方便在使用这个
+控件的过程中清晰逻辑，避免潜在的问题。
+
+[FastScrollLetter使用基础](http://redmine.meizu.com/documents/135)  
+这篇文章中，对FastScrollLetter的基本api做了介绍，以及xml中常用的属性做了说明，并且附上了简单的Demo演示，很实用。但是，最近发现在使用FastScrollLetter时，出现了一些错误的用法，导致bug，所以在这里对这篇文章进行补充。
+
+## 错误的写法 
+在使用FastScorllLetter时，都会创建一个Adapter类，并且实现SectionIndexer三个接口；这时，会给Adapter添加一个FastScrollLetter对象，用于快速导航条实现，一般都是这样创建的：
+  
+``` java  
+AlphabetIndexer mIndexer;
+mIndexer = new AlphabetIndexer(new IndexCursor(this), 0, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+```
+这里直接设置AlphabetIndexer的Index Section是从A到Z的，当然也可以设置别的。
+下面是容易出错的地方： 
+  
+``` java  
+public int getPositionForSection(int sectionIndex);
+public int getSectionForPosition(int position);
+public Object[] getSection();
+```
+一般的写法都是这样子的：  
+
+``` java
+ @Override
+    public int getPositionForSection(int sectionIndex) {
+        return mIndexer.getPositionForSection(sectionIndex);
+    }
+    
+ @Override
+    public int getSectionForPosition(int position) {
+        return mIndexer.getSectionForPosition(position);
+    }
+ @Override
+    public Object[] getSections() {
+        return mStrArr; //ABCDEFGHIJKLMNOPQRSTUVWXYZ
+    }
+```  
+这样写会存在很大的一个漏洞，我们从 AlphabetIndexer 源码说起。
+
+## 原因
+
+
+
+
+
+
+
+
+
+
+
