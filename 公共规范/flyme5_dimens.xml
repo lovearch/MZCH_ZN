@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2015 Meizu Co.,Ltd. -->
+
+<resources>
+    <!-- res -->
+    <!-- Text size for action bar titles -->
+    <dimen name="mz_action_bar_title_text_size">22sp</dimen>
+
+    <!-- Text size for action bar subtitles -->
+    <dimen name="mz_action_bar_subtitle_text_size">14dip</dimen>
+
+    <!-- Minimum height for a button -->
+    <dimen name="mz_button_minHeight">34dip</dimen>
+
+    <!-- ************************************************************** -->
+
+    <!--******************标准的不带图片的列表项************************-->
+    <!-- 单行文本的列表项高度 -->
+    <dimen name="mz_list_item_height_small">58dip</dimen>
+
+    <!-- 双行文本的列表项高度 -->
+    <dimen name="mz_list_item_height">63dip</dimen>
+
+    <!-- 三行文本的列表项高度 -->
+    <dimen name="mz_list_item_height_large">80dip</dimen>
+
+    <!-- 列表项到列表控件的左边距 -->
+    <dimen name="mz_list_item_padding_left">0dip</dimen>
+
+    <!-- 列表项到列表控件的右边距 -->
+    <dimen name="mz_list_item_padding_right">0dip</dimen>
+
+    <!-- 列表项内容到列表本身的左边距 -->
+    <dimen name="mz_list_item_content_padding_left">24dip</dimen>
+
+    <!-- 列表项内容到列表本身的右边距 -->
+    <dimen name="mz_list_item_content_padding_right">24dip</dimen>
+
+    <!-- 列表分隔线的左边距 -->
+    <dimen name="mz_list_divider_padding_left">12dip</dimen>
+
+    <!-- 列表分隔线的右边距 -->
+    <dimen name="mz_list_divider_padding_right">12dip</dimen>
+
+    <!-- 列表项内容离顶部的距离 -->
+    <dimen name="mz_list_item_padding_top">11dip</dimen>
+
+    <!-- 列表项一级和二级标题的间距 -->
+    <dimen name="mz_list_item_text_12_padding">5dip</dimen>
+
+    <!-- 列表项二级和三级标题的边距 -->
+    <dimen name="mz_list_item_text_23_padding">1dip</dimen>
+
+    <!-- 列表项内容离底部的距离 -->
+    <dimen name="mz_list_item_padding_bottom">11dip</dimen>
+
+    <!-- 特殊项离列表本身的右边距 -->
+    <dimen name="mz_list_item_content_padding_right_2">22dip</dimen>
+
+    <!-- 列表项中主标题的文字大小 -->
+    <dimen name="mz_list_item_text_size">16sp</dimen>
+
+    <!-- 列表项中副标题的文字大小 -->
+    <dimen name="mz_list_item_text_2_size">14sp</dimen>
+
+    <!--******************带头像的列表项************************-->
+    <!-- 单行文本的列表项高度 -->
+    <dimen name="mz_list_image_item_height_small">70dip</dimen>
+
+    <!-- 双行文本的列表项高度 -->
+    <dimen name="mz_list_image_item_height">70dip</dimen>
+
+    <!-- 三行文本的列表项高度 -->
+    <dimen name="mz_list_image_item_height_large">88dip</dimen>
+
+    <!-- 列表项内容到列表本身的左边距 -->
+    <dimen name="mz_list_image_item_content_padding_left">16dip</dimen>
+
+    <!-- 列表项内容到列表本身的右边距 -->
+    <dimen name="mz_list_image_item_content_padding_right">16dip</dimen>
+
+    <!-- 列表分隔线的左边距 -->
+    <dimen name="mz_list_image_divider_padding_left">78dip</dimen>
+
+    <!-- 列表分隔线的右边距 -->
+    <dimen name="mz_list_image_divider_padding_right">16dip</dimen>
+
+    <!-- 列表项内容离顶部的距离 -->
+    <dimen name="mz_list_image_item_padding_top">15dip</dimen>
+
+    <!-- 列表项一级和二级标题的间距 -->
+    <dimen name="mz_list_image_item_text_12_padding">4dip</dimen>
+
+    <!-- 列表项二级和三级标题的边距 -->
+    <dimen name="mz_list_image_item_text_23_padding">2dip</dimen>
+
+    <!-- 列表项内容离底部的距离 -->
+    <dimen name="mz_list_image_item_padding_bottom">15dip</dimen>
+
+    <!-- 列表项里面头像的宽度 -->
+    <dimen name="mz_list_image_width">46dip</dimen>
+
+    <!-- 列表项里面头像的高度 -->
+    <dimen name="mz_list_image_height">46dip</dimen>
+
+    <!-- 列表项里面头像距离列表项顶部的距离 -->
+    <dimen name="mz_list_image_padding_top">12dip</dimen>
+
+    <!-- 列表项里面头像距离列表项文字的距离 -->
+    <dimen name="mz_list_image_and_text_padding">16dip</dimen>
+
+    <!-- 列表项中主标题的文字大小 -->
+    <dimen name="mz_list_image_item_text_size">16sp</dimen>
+
+    <!--******************带图标的列表项************************-->
+    <!-- 三行文本的列表项高度 -->
+    <dimen name="mz_list_icon_item_height_large">74dip</dimen>
+
+    <!-- 列表项内容到列表本身的左边距 -->
+    <dimen name="mz_list_icon_item_content_padding_left">16dip</dimen>
+
+    <!-- 列表项内容到列表本身的右边距 -->
+    <dimen name="mz_list_icon_item_content_padding_right">16dip</dimen>
+
+    <!-- 列表分隔线的左边距 -->
+    <dimen name="mz_list_icon_divider_padding_left">82dip</dimen>
+
+    <!-- 列表分隔线的右边距 -->
+    <dimen name="mz_list_icon_divider_padding_right">16dip</dimen>
+
+    <!-- 列表项内容离顶部的距离 -->
+    <dimen name="mz_list_icon_item_padding_top">10dip</dimen>
+
+    <!-- 列表项一级和二级标题的间距 -->
+    <dimen name="mz_list_icon_item_text_12_padding">5dip</dimen>
+
+    <!-- 列表项二级和三级标题的边距 -->
+    <dimen name="mz_list_icon_item_text_23_padding">1dip</dimen>
+
+    <!-- 列表项内容离底部的距离 -->
+    <dimen name="mz_list_icon_item_padding_bottom">10dip</dimen>
+
+    <!-- 列表项里面图标的宽度 -->
+    <dimen name="mz_list_icon_width">50dip</dimen>
+
+    <!-- 列表项里面图标的高度 -->
+    <dimen name="mz_list_icon_height">50dip</dimen>
+
+    <!-- 列表项里面图标距离列表项顶部的距离 -->
+    <dimen name="mz_list_icon_padding_top">12dip</dimen>
+
+    <!-- 列表项里面图标距离列表项文字的距离 -->
+    <dimen name="mz_list_icon_and_text_padding">16dip</dimen>
+
+    <!-- 列表项中主标题的文字大小 -->
+    <dimen name="mz_list_icon_item_text_size">16sp</dimen>
+
+    <!-- 列表项中副标题的文字大小 -->
+    <dimen name="mz_list_icon_item_text_2_size">12sp</dimen>
+
+    <!--******************带索引的列表的索引标题************************-->
+    <!-- 索引标题的高度 -->
+    <dimen name="mz_list_index_title_height">30dip</dimen>
+    <!-- 索引离标题的左边距 -->
+    <dimen name="mz_list_index_title_padding_left">16dip</dimen>
+
+    <!-- 列表项中索引的文字大小 -->
+    <dimen name="mz_list_index_title_text_size">14sp</dimen>
+
+    <!--******************卡片分类的小标题************************-->
+
+    <dimen name="mz_list_card_1_little_title_height">12dip</dimen>
+    <dimen name="mz_list_card_1_title_height">38dip</dimen>
+
+    <!-- 列表分隔线的左边距 -->
+    <dimen name="mz_list_card_1_divider_padding_left">12dip</dimen>
+
+    <!-- 列表分隔线的右边距 -->
+    <dimen name="mz_list_card_1_divider_padding_right">12dip</dimen>
+
+    <!-- 列表项内容到列表本身的左边距 -->
+    <dimen name="mz_list_card_1_title_content_padding_left">24dip</dimen>
+
+    <dimen name="mz_list_card_1_text_pic_padding">6dip</dimen>
+
+    <!-- 列表项内容离顶部的距离 -->
+    <dimen name="mz_list_card_1_item_padding_top">13dip</dimen>
+
+    <!-- 列表项一级和二级标题的间距 -->
+    <dimen name="mz_list_card_1_item_text_12_padding">6dip</dimen>
+
+    <!-- 列表项二级和三级标题的边距 -->
+    <dimen name="mz_list_card_1_item_text_23_padding">5dip</dimen>
+
+    <!-- 列表项内容离底部的距离 -->
+    <dimen name="mz_list_card_1_item_padding_bottom">12dip</dimen>
+
+    <dimen name="mz_list_card_2_little_title_height">8dip</dimen>
+    <dimen name="mz_list_card_2_title_height">27dip</dimen>
+
+    <!-- 列表项中主标题的文字大小 -->
+    <dimen name="mz_list_card_1_title_text_size">16sp</dimen>
+
+    <!-- 列表项中主标题的文字大小 -->
+    <dimen name="mz_list_card_2_title_text_size">14sp</dimen>
+
+    <!--******************分类小标题************************-->
+    <dimen name="mz_list_category_1_little_title_height">13dip</dimen>
+    <dimen name="mz_list_category_1_title_height">38dip</dimen>
+
+    <dimen name="mz_list_category_1_text_pic_padding">3dip</dimen>
+
+    <!-- 列表项内容到列表本身的左边距 -->
+    <dimen name="mz_list_category_1_title_content_padding_left">12dip</dimen>
+
+    <dimen name="mz_list_category_2_little_title_height">12dip</dimen>
+    <dimen name="mz_list_category_2_title_height">38dip</dimen>
+
+    <dimen name="mz_list_category_2_text_pic_padding">3dip</dimen>
+
+    <!-- 列表项内容到列表本身的左边距 -->
+    <dimen name="mz_list_category_2_title_content_padding_left">12dip</dimen>
+
+    <!-- 列表项中主标题的文字大小 -->
+    <dimen name="mz_list_category_title_text_size">16sp</dimen>
+
+    <!-- 列表项中右侧标题的文字大小 -->
+    <dimen name="mz_list_category_right_label_text_size">14sp</dimen>
+
+    <dimen name="mz_list_category_identity_width">2dip</dimen>
+    <dimen name="mz_list_category_identity_height">15dip</dimen>
+
+    <!--******************其他特殊列表项************************-->
+    <dimen name="mz_list_tag_content_padding_left">24dip</dimen>
+    <dimen name="mz_list_tag_padding">8dip</dimen>
+    <dimen name="mz_list_tag_inner_padding_left">16dip</dimen>
+    <dimen name="mz_list_tag_inner_padding_right">16dip</dimen>
+    <dimen name="mz_list_tag_length">72dip</dimen>
+
+    <!-- 列表项中主标题的文字大小 -->
+    <dimen name="mz_list_tag_text_size">12sp</dimen>
+
+    <dimen name="mz_list_label_inner_height">45dip</dimen>
+    <dimen name="mz_list_label_padding">60dip</dimen>
+
+    <!--******************二级下拉的列表项************************-->
+    <!-- 双行文本的列表项高度 -->
+    <dimen name="mz_list_nest_item_height">48dip</dimen>
+
+    <!-- 二级项距离标题的距离 -->
+    <dimen name="mz_list_nest_item_margin_top">11dip</dimen>
+
+    <!-- 列表项距离列表的右边距 -->
+    <dimen name="mz_list_nest_item_content_padding_right">24dip</dimen>
+
+    <!-- 列表项内容离顶部的距离 -->
+    <dimen name="mz_list_nest_item_padding_top">14dip</dimen>
+
+    <!-- 列表项内容离底部的距离 -->
+    <dimen name="mz_list_nest_item_padding_bottom">14dip</dimen>
+
+    <!-- 右边check的宽度 -->
+    <dimen name="mz_list_nest_item_check_width">20dip</dimen>
+    <!-- 右边check的高度 -->
+    <dimen name="mz_list_nest_item_check_height">20dip</dimen>
+
+    <!-- 列表项嵌套项的文字大小 -->
+    <dimen name="mz_list_nest_text_size">14sp</dimen>
+
+    <!-- 列表顶部的内边距 -->
+    <dimen name="mz_list_padding_top">15dip</dimen>
+
+    <!-- 列表项到列表控件的左边距（弹出列表） -->
+    <dimen name="mz_popup_list_item_padding_left">0dip</dimen>
+
+    <!-- 列表项到列表控件的右边距（弹出列表） -->
+    <dimen name="mz_popup_list_item_padding_right">0dip</dimen>
+
+    <!-- 列表项内容到列表项本身的左边距（弹出列表） -->
+    <dimen name="mz_popup_list_item_content_padding_left">24dip</dimen>
+
+    <!-- 列表项内容到列表项本身的右边距（弹出列表） -->
+    <dimen name="mz_popup_list_item_content_padding_right">24dip</dimen>
+
+    <!-- ListView 左边CheckBox的宽度 -->
+    <dimen name="mz_left_checkbox_width">47dip</dimen>
+    <!-- ListView 右边CheckBox的宽度 -->
+    <dimen name="mz_right_checkbox_width">29dip</dimen>
+
+    <!-- 深色列表项的相关尺寸-->
+    <!-- 列表项中主标题的文字大小 -->
+    <dimen name="mz_list_item_dark_text_size">16sp</dimen>
+
+    <!-- 列表项中副标题的文字大小 -->
+    <dimen name="mz_list_item_dark_text_2_size">14sp</dimen>
+
+    <!-- Yuchao: 以下用于状态栏和通知栏 -->
+
+    <!-- 状态栏高度 -->
+    <dimen name="status_bar_height">25dip</dimen>
+
+    <!-- template_base模板下每条通知的高度 -->
+    <dimen name="mz_template_base_notification_height">64dp</dimen>
+
+    <!-- template_big相关模板下每条通知的最小高度 -->
+    <dimen name="mz_template_big_notification_min_height">65dp</dimen>
+
+    <!-- 每条通知左侧通知图标外框区域的大小 -->
+    <!-- The width of the big icons in notifications. -->
+    <dimen name="notification_large_icon_width">69dp</dimen>
+    <!-- The width of the big icons in notifications. -->
+    <dimen name="notification_large_icon_height">64dp</dimen>
+
+    <!-- 每条通知左侧通知图标的大小 -->
+    <!-- The width of the small icons in notifications. -->
+    <dimen name="mz_notification_small_icon_width">42dp</dimen>
+    <!-- The width of the small icons in notifications. -->
+    <dimen name="mz_notification_small_icon_height">42dp</dimen>
+
+    <!-- 每条通知内容的右侧距屏幕右边框的间距 -->
+    <dimen name="mz_notification_base_padding_right">10dp</dimen>
+
+    <!-- 截图通知的高度 -->
+    <dimen name="mz_notification_big_picture_height">192dp</dimen>
+    <!-- 截图通知中Actions按钮距通知顶部的空白 -->
+    <dimen name="mz_notification_big_picture_actions_margin_top">144dp</dimen>
+
+    <dimen name="mz_notification_min_height">56dp</dimen>
+    <dimen name="mz_notification_action_list_margin_top">108dp</dimen>
+    <dimen name="mz_notification_action0_height">43dp</dimen>
+    <integer name="mz_notification_big_text_max_line">5</integer>
+    <dimen name="mz_progress_bar_margin_top">1dp</dimen>
+    <dimen name="mz_notification_line1_padding_bottom">1dp</dimen>
+    <dimen name="mz_noti_single_line_padding_top">8dp</dimen>
+    <dimen name="mz_noti_single_line_margin_top">-8dp</dimen>
+
+    <!-- Size of notification text titles (see TextAppearance.StatusBar.EventContent.Title) -->
+    <dimen name="notification_title_text_size">18dp</dimen>
+
+    <!-- template_base模板下每条通知的高度 -->
+    <dimen name="mz_template_base_icon_padding_bottom">64dp</dimen>
+    <!-- template_base模板下通知图标外框和内框的左侧间距 -->
+    <dimen name="mz_template_base_large_icon_padding_left">11dp</dimen>
+    <!-- template_base模板下通知图标外框和内框的右侧间距 -->
+    <dimen name="mz_template_base_large_icon_padding_right">16dp</dimen>
+    <!-- template_base模板下进度条的高度 -->
+    <dimen name="mz_template_base_progressbar_height">3dp</dimen>
+    <!-- template_base模板下进度条距上边容器的距离 -->
+    <dimen name="mz_template_base_progressbar_margin_top">1.3dp</dimen>
+    <!-- template_base模板下line1距离顶部的空白 -->
+    <dimen name="mz_template_base_line1_padding_top">8dp</dimen>
+    <!-- template_base模板下line3距离顶部的空白 -->
+    <dimen name="mz_template_base_line3_padding_top">0dp</dimen>
+    <!-- template_base模板下图标和文字区域的整体上移偏移量 -->
+    <dimen name="mz_template_base_marging_top">0dp</dimen>
+
+    <!-- template_inbox模板下通知内容距离右边框的距离 -->
+    <dimen name="mz_template_inbox_margin_end">2dp</dimen>
+
+    <!-- template_big_picture模板下通知内容距离右边框的距离 -->
+    <dimen name="mz_template_big_picture_margin_end">16dp</dimen>
+    <!-- template_big_picture模板下Action按钮距离左边框的距离 -->
+    <dimen name="mz_template_big_picture_padding_start">72dp</dimen>
+
+    <!-- template_big_text模板下通知内容距离右边框的距离 -->
+    <dimen name="mz_template_big_text_margin_end">16dp</dimen>
+
+    <!-- template_big_base模板下action_divider的左右空白边距 -->
+    <dimen name="mz_template_big_base_action_divider_margin_start">80dp</dimen>
+    <dimen name="mz_template_big_base_action_divider_margin_end">8dp</dimen>
+
+    <!-- template_base_circle_progressbar模板下图标和文字为达到居中效果而微调的偏移量 -->
+    <dimen name="mz_template_base_circle_progressbar_marging_top">0dp</dimen>
+    <dimen name="mz_template_base_circle_progressbar_marging_left">0dp</dimen>
+
+    <!-- template_base_circle_progressbar模板下圆环进度条的直径（普通圆环） -->
+    <dimen name="mz_template_base_circle_progressbar_diameter">24dp</dimen>
+    <!-- template_base_circle_progressbar模板下圆环进度条的直径（带控制按钮的圆环） -->
+    <dimen name="mz_template_base_circle_progressbar_diameter_control">30dp</dimen>
+
+    <!-- template_base_circle_progressbar模板下圆环进度条的粗细（普通圆环） -->
+    <dimen name="mz_template_base_circle_progressbar_width">2dp</dimen>
+    <!-- template_base_circle_progressbar模板下圆环进度条的粗细（带控制按钮的圆环） -->
+    <dimen name="mz_template_base_circle_progressbar_width_control">2dp</dimen>
+
+    <!-- template_base_circle_progressbar模板下圆环进度条的上边距（普通圆环） -->
+    <dimen name="mz_template_base_circle_progressbar_margin_top">0dp</dimen>
+    <!-- template_base_circle_progressbar模板下圆环进度条的上边距（带控制按钮的圆环） -->
+    <dimen name="mz_template_base_circle_progressbar_margin_top_control">0dp</dimen>
+
+    <!-- template_base_circle_progressbar模板下圆环进度条的右边距（普通圆环） -->
+    <dimen name="mz_template_base_circle_progressbar_marging_right">19dp</dimen>
+    <!-- template_base_circle_progressbar模板下圆环进度条的右边距（带控制按钮的圆环） -->
+    <dimen name="mz_template_base_circle_progressbar_marging_right_control">16dp</dimen>
+
+    <!-- template_base_circle_progressbar模板下通知文字部分的最大宽度（防止超出圆环部分） -->
+    <dimen name="mz_template_base_circle_progressbar_text_max_width">215dp</dimen>
+
+    <!-- End. Yuchao:状态栏和通知栏 -->
+
+    <!-- Meizu Circle ProgressBar diameter-->
+    <dimen name="mz_circle_progressbar_layout_width">33dip</dimen>
+    <dimen name="mz_circle_progressbar_layout_height">33dip</dimen>
+    <dimen name="mz_circle_progressbar_width">1.75dip</dimen>
+
+    <!-- Alert dialog 最大高度 -->
+    <dimen name="mz_alert_dialog_max_height">392dip</dimen>
+    <!-- Alert dialog 最小高度 -->
+    <dimen name="mz_alert_dialog_with_button_min_height">131.4dip</dimen>
+    <dimen name="mz_alert_dialog_no_button_min_height">48dip</dimen>
+    <!-- Alert dialog 最小宽度 -->
+    <dimen name="mz_alert_dialog_with_button_min_width">312dip</dimen>
+    <dimen name="mz_alert_dialog_no_button_min_width">246dip</dimen>
+    <dimen name="mz_alert_dialog_width">324dip</dimen>
+    <!-- Alert dialog带按钮和一个Panel， Panel最小高度 -->
+    <dimen name="mz_alert_dialog_panel_min_height">104dip</dimen>
+
+    <!-- Alert dialog button bar height -->
+    <dimen name="mz_alert_dialog_button_bar_height">47.6dip</dimen>
+
+    <!-- Alert dialog 标题最小高度 -->
+    <dimen name="mz_alert_dialog_title_min_height">48dip</dimen>
+
+    <!-- Alert dialog 标题有checkBox时的高度 -->
+    <dimen name="mz_alert_dialog_checkbox_height">35.25dip</dimen>
+
+    <!-- Alert dialog title padding -->
+    <dimen name="mz_alert_dialog_title_padding_top">20dip</dimen>
+    <dimen name="mz_alert_dialog_title_text_padding_left">15.2dip</dimen>
+    <dimen name="mz_alert_dialog_title_list_padding_top">5dip</dimen>
+    <dimen name="mz_alert_dialog_title_list_padding_bottom">4.6dip</dimen>
+    <dimen name="mz_alert_dialog_title_scrolltextview_padding_top">0dip</dimen>
+    <dimen name="mz_alert_dialog_title_scrolltextview_padding_bottom">8dip</dimen>
+    <dimen name="mz_alert_dialog_title_edittext_padding_top">0dip</dimen>
+    <dimen name="mz_alert_dialog_title_edittext_padding_bottom">4.6dip</dimen>
+    <dimen name="mz_alert_dialog_title_edittext_padding_left">9.2dip</dimen>
+    <dimen name="mz_alert_dialog_title_edittext_padding_right">9.2dip</dimen>
+
+    <!-- Alert dialog带有checkbox的title，box和文字间距 -->
+    <dimen name="mz_alert_dialog_title_check_box_margin">7.2dip</dimen>
+
+    <!-- Alert dialog message padding -->
+    <dimen name="mz_alert_dialog_message_padding_left">16dip</dimen>
+    <dimen name="mz_alert_dialog_message_padding_right">16dip</dimen>
+    <dimen name="mz_alert_dialog_message_padding_top">6.6dip</dimen>
+    <dimen name="mz_alert_dialog_message_padding_bottom">20dip</dimen>
+    <!-- Alert dialog 当message中的字符串正好为3行时，字符串的长度 3 * 563 / 2.5-->
+    <dimen name="mz_alert_dialog_message_limited_width_value">675.6dip</dimen>
+    <!-- Alert dialog 当Message作为Title时，padding_left -->
+    <dimen name="mz_alert_dialog_message_as_title_padding_left">15.2dip</dimen>
+    <!-- Alert dialog message icon marginButtom -->
+    <dimen name="mz_alert_dialog_message_icon_margin_buttom">5dip</dimen>
+    <dimen name="mz_alert_dialog_button_margin_top">28dip</dimen>
+    <!-- Alert dialog 多项文本内容到弹出框的左、右边距 -->
+    <dimen name="mz_alert_dialog_text_padding_left">30dip</dimen>
+    <dimen name="mz_alert_dialog_text_padding_right">30dip</dimen>
+
+    <!-- Alert dialog 通过SetView添加的自定义View的边距 -->
+    <dimen name="mz_dialog_custom_view_margin_horizontal">13dip</dimen>
+
+    <!-- Alert dialog EditText到弹出框的左边距 -->
+    <dimen name="mz_alert_dialog_edittext_padding_left">24dip</dimen>
+    <!-- Alert dialog EditText到弹出框的右边距 -->
+    <dimen name="mz_alert_dialog_edittext_padding_right">24dip</dimen>
+    <!-- Alert dialog EditText到弹出框的上边距 -->
+    <dimen name="mz_alert_dialog_edittext_padding_top">5dip</dimen>
+    <!-- Alert dialog EditText到弹出框的下边距 -->
+    <dimen name="mz_alert_dialog_edittext_padding_bottom">28dip</dimen>
+    <dimen name="mz_alert_dialog_no_title_edittext_padding_top">7.6dip</dimen>
+
+    <!-- Alert dialog EditText的高度 -->
+    <dimen name="mz_alert_dialog_edittext_height">55dip</dimen>
+    <!-- Alert dialog 只有一个EditText的高度 -->
+    <dimen name="mz_alert_dialog_one_edittext_height">55dip</dimen>
+
+    <!-- Alert dialog EditText内容的下边距 -->
+    <dimen name="mz_alert_dialog_edittext_content_padding_bottom">15.6dip</dimen>
+
+    <!-- Alert dialog EditText文本字体大小 -->
+    <dimen name="mz_alert_dialog_edittext_text_size">18sp</dimen>
+
+    <!-- Alert dialog EditText 到外面布局的距离 -->
+    <dimen name="mz_alert_dialog_edittext_margin_left">6.4dip</dimen>
+    <dimen name="mz_alert_dialog_edittext_margin_right">6.4dip</dimen>
+    <dimen name="mz_alert_dialog_edittext_margin_bottom">8dip</dimen>
+    <dimen name="mz_alert_dialog_edittext_inner_padding_bottom">2.5dip</dimen>
+    <dimen name="mz_alert_dialog_edittext_inner_padding_left">12dip</dimen>
+    <dimen name="mz_alert_dialog_edittext_line_spacing">4dip</dimen>
+    <!-- Alert dialog EditText 光标到hint文本的距离 -->
+    <dimen name="mz_alert_dialog_edittext_cursor_to_hint">6.4dip</dimen>
+
+    <!-- Alert dialog 标题文字尺寸 -->
+    <!-- Alert dialog button text size -->
+    <dimen name="mz_alert_dialog_button_text_size">18sp</dimen>
+
+    <!-- Alert dialog toppanel or contentpanel margin left -->
+    <dimen name="mz_alertDialog_content_margin_left">23.6dip</dimen>
+    <!-- Alert dialog toppanel or contentpanel marginTop-->
+    <dimen name="mz_alertDialog_content_margin_top">23dip</dimen>
+    <!-- Alert dialog toppanel or contentpanel marginButtom -->
+    <dimen name="mz_alertDialog_content_margin_buttom">18.6dip</dimen>
+    <dimen name="mz_alertDialog_title_margin_top">24dip</dimen>
+    <dimen name="mz_alertDialog_message_margin_bottom">13.3dip</dimen>
+    <dimen name="mz_alertDialog_message_margin_bottom_no_btn">18.3dip</dimen>
+
+    <dimen name="mz_alertDialog_haslist_title_margin_left">27.6dip</dimen>
+    <dimen name="mz_alertDialog_haslist_title_margin_bottom">12dip</dimen>
+
+    <!-- the height of listview item in alertdialog -->
+    <dimen name="mz_alertDialog_list_item_height">48dip</dimen>
+
+    <!-- Progress dialog 进度圈与文本间的间隔 -->
+    <dimen name="mz_progress_dialog_message_padding_left">8dip</dimen>
+    <dimen name="mz_progress_dialog_ProgressBar_width">13dip</dimen>
+
+    <!-- 单选勾选框右侧边距 （弹出列表） -->
+    <dimen name="mz_popup_list_item_singlechoice_padding_right">24dip</dimen>
+    <!-- 多选勾选框右侧边距 （弹出列表）-->
+    <dimen name="mz_popup_list_item_multichoice_padding_right">24dip</dimen>
+
+
+    <!-- for toast -->
+    <dimen name="mz_toast_padding">31dip</dimen>
+    <dimen name="mz_toast_padding_top">8dip</dimen>
+    <dimen name="mz_toast_y_offset">30dip</dimen>
+
+    <dimen name="mz_progress_dialog_padding_no_message">8dip</dimen>
+
+    <!-- 编辑框静态文本与输入文本之间的距离 -->
+    <dimen name="static_hint_to_edit_padding">10dp</dimen>
+
+    <!-- Distance to TitleBar'bottom for ListView -->
+    <dimen name="mz_list_inner_padding_top">20dip</dimen>
+    <!-- Distance to TitleBar'bottom for ListView with header -->
+    <dimen name="mz_list_category_inner_padding_top">15dip</dimen>
+
+    <!-- @} res-meizu-ex -->
+
+    <!-- res-meizu-common {@ -->
+    <!-- slidingmenu menu default width -->
+    <dimen name="mz_slidingmenu_menu_width">256dip</dimen>
+
+    <!-- 卡片列表项到列表控件的左边距 -->
+    <dimen name="mz_card_list_item_padding_left">0dip</dimen>
+
+    <!-- 卡片列表项到列表控件的右边距 -->
+    <dimen name="mz_card_list_item_padding_right">0dip</dimen>
+
+    <!-- GroupList Header -->
+    <!-- 分组列表第一项group header的最小高度 -->
+    <dimen name="mz_group_top_header_minHeight">30dip</dimen>
+    <!-- 分组列表group header的最小高度 -->
+    <dimen name="mz_group_interval_header_minHeight">12.4dip</dimen>
+    <!-- 分组列表group header 带文本的高度 -->
+    <dimen name="mz_group_interval_header_title_height">35dip</dimen>
+    <!-- 分组列表group header 文本的下边距 -->
+    <dimen name="mz_group_header_title_padding_bottom">8dip</dimen>
+    <!-- 分组列表footer的高度 -->
+    <dimen name="mz_group_list_footer_height">14.4dip</dimen>
+
+    <!-- 分组列表group header里面的分隔线高度 -->
+    <dimen name="mz_group_interval_header_divider_height">3px</dimen>
+
+    <!-- 分组列表group header里面的文字大小 -->
+    <dimen name="mz_group_interval_header_text_size">14sp</dimen>
+
+    <!-- PinnedList Header -->
+    <!-- 列表第一项group header的最小高度 -->
+    <dimen name="mz_pinned_top_header_minHeight">30.4dip</dimen>
+    <!-- 列表group header的最小高度 -->
+    <dimen name="mz_pinned_interval_header_minHeight">12.4dip</dimen>
+    <!-- 列表group header 带文本的高度 -->
+    <dimen name="mz_pinned_interval_header_title_height">35dip</dimen>
+    <!-- 列表group header 文本的边距 -->
+    <dimen name="mz_pinned_header_title_padding_left">28dip</dimen>
+    <dimen name="mz_pinned_header_title_padding_right">28dip</dimen>
+    <dimen name="mz_pinned_header_title_padding_bottom">3.5dip</dimen>
+    <!-- 列表项右侧多选控件离列表项右侧的边距-->
+    <dimen name="mz_anim_checkbox_margin_right">24dip</dimen>
+
+    <!-- 选择计数器文字大小 -->
+    <dimen name="mz_selection_button_text_size">12dip</dimen>
+
+    <!-- Actionbar -->
+    <!-- Minimum width for an action button in the menu area of an action bar -->
+    <dimen name="mz_action_button_min_width">56dip</dimen>
+
+    <!-- Minimum height for an action button in the menu area of an action bar -->
+    <dimen name="mz_action_button_min_height">48dip</dimen>
+
+    <dimen name="mz_action_bar_up_min_width">28dip</dimen>
+
+    <!-- Action bar for meizu -->
+    <dimen name="mz_action_bar_default_height">48dip</dimen>
+
+
+    <!-- meizu picker text size -->
+    <dimen name="mz_picker_unselected_number_size">18sp</dimen>
+
+    <dimen name="mz_picker_selected_number_size">22sp</dimen>
+
+    <dimen name="mz_picker_unselected_ampm_size">15sp</dimen>
+
+    <dimen name="mz_picker_selected_ampm_size">20sp</dimen>
+
+    <dimen name="mz_picker_text_size">14sp</dimen>
+
+    <!-- meizu picker dimension -->
+    <dimen name="mz_picker_width">288.8dip</dimen>
+
+    <dimen name="mz_picker_height">200.8dip</dimen>
+
+    <dimen name="mz_picker_padding_left">18dip</dimen>
+
+    <dimen name="mz_picker_padding_right">18dip</dimen>
+
+    <dimen name="mz_picker_scroll_item_height">40dip</dimen>
+
+    <dimen name="mz_picker_offset_y">0dip</dimen>
+
+    <dimen name="mz_picker_text_width">30dip</dimen>
+
+    <dimen name="mz_picker_column_width">84dip</dimen>
+
+    <!-- date picker -->
+    <dimen name="mz_picker_year_column_width">94dip</dimen>
+    <dimen name="mz_picker_year_scroll_padding_right">10.6dip</dimen>
+    <dimen name="mz_picker_year_text_padding_right">-13.6dip</dimen>
+    <dimen name="mz_picker_month_scroll_padding_right">10.6dip</dimen>
+    <dimen name="mz_picker_month_text_padding_right">-3.6dip</dimen>
+    <dimen name="mz_picker_day_scroll_padding_right">2dip</dimen>
+    <dimen name="mz_picker_day_text_padding_right">-5.6dip</dimen>
+
+    <!-- 1-column picker -->
+    <dimen name="mz_picker_column_1_text_margin_right">162dip</dimen>
+    <!-- 2-column picker -->
+    <dimen name="mz_picker_column_2_text_margin_right">16.8dip</dimen>
+    <!-- 3-column picker -->
+    <dimen name="mz_picker_column_3_text_1_margin_right">0dip</dimen>
+    <dimen name="mz_picker_column_3_text_2_margin_right">0dip</dimen>
+    <dimen name="mz_picker_column_3_text_3_margin_right">0dip</dimen>
+
+    <!-- picker layout padding -->
+    <dimen name="mz_picker_layout_margin_left">7.6dip</dimen>
+
+    <dimen name="mz_picker_layout_margin_right">7.6dip</dimen>
+
+    <dimen name="mz_picker_layout_margin_top">0dip</dimen>
+
+    <dimen name="mz_picker_layout_margin_bottom">7.6dip</dimen>
+
+    <!-- Preference fragment padding, sides -->
+    <dimen name="preference_screen_header_padding_side">20dip</dimen>
+    <!-- Preference 的ListView到Preference Screen的距离 -->
+    <dimen name="preference_fragment_padding_side">0dip</dimen>
+    <!-- Preference item到ListView边距的距离 -->
+    <dimen name="preference_item_padding_side">24dip</dimen>
+    <!-- Preference title 和 suammary的右padding -->
+    <dimen name="preference_item_padding_inner">15dip</dimen>
+    <dimen name="preference_child_padding_side">32dip</dimen>
+    <!-- Preference widget area width (to the left of the text) -->
+    <dimen name="preference_widget_width">43dp</dimen>
+
+    <!-- preference item到listview边距的距离 -->
+    <dimen name="mz_preference_item_padding_side">12dip</dimen>
+    <!-- preference item到listview边距的距离 -->
+    <dimen name="mz_preference_item_padding_right">9dip</dimen>
+    <!-- preference title的右margin -->
+    <dimen name="mz_preference_title_margin_left">12dip</dimen>
+
+    <!-- preference item min height -->
+    <dimen name="mz_preference_min_height">63dip</dimen>
+    <!-- preference icon horizontal margin -->
+    <dimen name="mz_preference_icon_margin_horizontal">3dip</dimen>
+    <!-- preference category 标题最小高度 -->
+    <dimen name="mz_preference_category_mini_height">35dip</dimen>
+    <dimen name="mz_preference_category_padding_top">0dip</dimen>
+    <dimen name="mz_preference_category_padding_bottom">5.8dip</dimen>
+    <!-- preference icon 宽度 -->
+    <dimen name="mz_preference_icon_width">48dip</dimen>
+    <!-- preference 左右间距 -->
+    <dimen name="mz_preference_margin">19dip</dimen>
+    <!-- preference 右侧图标宽度 -->
+    <dimen name="mz_preference_widget_icon_width">48dip</dimen>
+    <dimen name="mz_preference_padding_with_icon">3dip</dimen>
+    <dimen name="mz_preference_padding_no_icon">8dip</dimen>
+    <dimen name="mz_preference_item_padding_inner">4dip</dimen>
+
+    <!-- pref header item(setting主界面，左边带有图片的item)高度 -->
+    <dimen name="mz_preference_header_item_height">53dip</dimen>
+    <!-- pref右边switch右偏距 -->
+    <dimen name="mz_preference_switch_margin_right">13dip</dimen>
+    <!-- pref右边checkbox右偏距 -->
+    <dimen name="mz_preference_checkbox_margin_right">27.6dip</dimen>
+    <!-- pref右边向右箭头右偏距 -->
+    <dimen name="mz_preference_right_arrow_margin_right">28dip</dimen>
+    <!-- pref右边底部三角图标右偏距 -->
+    <dimen name="mz_preference_list_more_margin_right">28dip</dimen>
+    <dimen name="mz_preference_list_more_margin_bottom">8.3dip</dimen>
+    <!-- pref category文字的大小， 防止scale设定为dip -->
+    <dimen name="mz_preference_category_text_size">14sp</dimen>
+    <!-- preference_seekbar.xml中 seek bar的宽度 -->
+    <dimen name="mz_preference_seek_bar_width">240dip</dimen>
+    <!-- pref右边为分割线+checkbox时，chekcbox的左边到分割线的距离, 例如输入法选择 -->
+    <dimen name="mz_preference_gap_between_divider_and_checkbox">38dip</dimen>
+    <dimen name="mz_preference_checkbox_divider_marginTop">12dip</dimen>
+    <dimen name="mz_preference_seekbar_padding_left">28dip</dimen>
+    <dimen name="mz_preference_seekbar_padding_right">28dip</dimen>
+    <!-- ListPreference 弹出框与PreferenceView右间距 -->
+    <dimen name="mz_preference_list_popup_padding_right">14dip</dimen>
+    <dimen name="mz_preference_list_popup_item_padding_left">28dip</dimen>
+    <dimen name="mz_preference_list_popup_item_padding_right">21dip</dimen>
+    <!-- checkbox preference checkbox宽度 -->
+    <dimen name="mz_preference_checkbox_widget_width">64dip</dimen>
+
+    <!-- Meizu 文本字体大小 -->
+    <dimen name="mz_text_size_normal">16sp</dimen>
+    <dimen name="mz_text_size_large">22sp</dimen>
+    <dimen name="mz_text_size_medium">18sp</dimen>
+    <dimen name="mz_text_size_small">14sp</dimen>
+    <dimen name="mz_text_size_mini">10sp</dimen>
+
+    <!-- the distance between category and actionBar -->
+    <dimen name="mz_preferencefragment_category_margin_top">15dip</dimen>
+    <!-- the distance between normal preference and actionBar -->
+    <dimen name="mz_preferencefragment_margin_top">20dip</dimen>
+
+    <!--for meizu preference icon-->
+    <dimen name="mz_preference_icon_width_normal">42dp</dimen>
+    <dimen name="mz_preference_icon_height_normal">42dp</dimen>
+
+    <!-- popup menu 项的最小宽度 -->
+    <dimen name="mz_popup_menu_item_min_width">232dip</dimen>
+    <!-- popup menu item 的高度 -->
+    <dimen name="mz_popup_menu_item_height">48dip</dimen>
+
+    <!-- for CircularButton-->
+    <dimen name="mz_btn_stroke_width">1dp</dimen>
+    <dimen name="mz_cir_btn_radius_normal">50dp</dimen>
+    <!-- @} res-meizu-common -->
+</resources>
