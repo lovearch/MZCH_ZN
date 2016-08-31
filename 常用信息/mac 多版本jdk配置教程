@@ -30,6 +30,7 @@ alias jdk6='export JAVA_HOME=$JAVA_6_HOME’
 #重新执行.bash_profile文件
 
 source ~/.bash_profile
+
 3、验证：
 使用：jdk6、jdk7、jdk8 即可切换jdk版本
 PS：http://www.yneit.com/2014/11/mac-jdk%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2.html
